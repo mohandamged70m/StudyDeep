@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+@import "highlight.js/styles/github.css";
+
+
+@theme {
+  --font-heading: 'Lora', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'ui-monospace', 'SFMono-Regular', monospace;
+
+  --color-cream: #FAF8F4;
+  --color-cream-2: #F2EEE7;
+  --color-cream-3: #E8E2D8;
+  --color-ink: #2C2416;
+  --color-ink-2: #6B5E4A;
+  --color-ink-3: #A99880;
+  --color-border: #E0D8CE;
+  --color-amber: #D4891A;
+  --color-amber-light: #FEF3E2;
+  --color-amber-mid: #F5C76A;
+  --color-teal: #1A7A6A;
+  --color-teal-light: #E4F4F1;
+  --color-coral: #C94F2C;
+  --color-coral-light: #FBF0EC;
+  --color-violet: #5B4FBF;
+  --color-violet-light: #EEEDF9;
+  --color-green: #2E7D50;
+  --color-green-light: #E8F5EE;
+
+  --shadow-sm: 0 1px 3px rgba(44, 36, 22, 0.08);
+  --shadow-md: 0 4px 16px rgba(44, 36, 22, 0.10);
+  --shadow-lg: 0 8px 32px rgba(44, 36, 22, 0.12);
+
+  --radius: 10px;
+  --radius-lg: 16px;
+}
+
+:root {
+  --bg-page: #FAF8F4;
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #F2EEE7;
+  --bg-elevated: #FFFFFF;
+  --text-primary: #2C2416;
+  --text-secondary: #6B5E4A;
+  --text-muted: #A99880;
+  --border-color: #E0D8CE;
+  --accent: #D4891A;
+}
+
+.dark {
+  --bg-page: #1C1814;
+  --bg-card: #2A241E;
+  --bg-sidebar: #221E19;
+  --bg-elevated: #332C24;
+  --text-primary: #F5F0EA;
+  --text-secondary: #B8AA98;
+  --text-muted: #7A6E5C;
+  --border-color: #3A342E;
+  --accent: #F5C76A;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #E8E2D8; border-radius: 999px; }
+.dark ::-webkit-scrollbar-thumb { background: #3A342E; }
+
+@layer base {
+  * { border-color: var(--border-color); }
+}
